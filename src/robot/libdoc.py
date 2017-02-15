@@ -198,7 +198,8 @@ def libdoc_cli(arguments):
     LibDoc().execute_cli(arguments)
 
 
-def libdoc(library_or_resource, outfile, name='', version='', format=None):
+def libdoc(library_or_resource, outfile, name='', version='', format=None,
+           docformat=None):
     """Executes Libdoc.
 
     :param library_or_resource: Name or path of the test library or resource
@@ -221,7 +222,7 @@ def libdoc(library_or_resource, outfile, name='', version='', format=None):
         libdoc('MyLibrary.py', 'MyLibraryDoc.html', version='1.0')
     """
     LibDoc().execute(library_or_resource, outfile, name=name, version=version,
-                     format=format)
+                     format=format, docformat=docformat)
 
 
 if __name__ == '__main__':
